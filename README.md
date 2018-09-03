@@ -1,3 +1,3 @@
 # Hashing
 
-Repository for implementing interesting hash functions and analyzing the properties.
+Repository for implementing interesting hash functions and analyzing their properties.
