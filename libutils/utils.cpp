@@ -1,4 +1,5 @@
 #include "utils.h"
+#include <stdexcept>
 
 uint64_t Utils::GetMsb(
     uint64_t x,

@@ -3,6 +3,8 @@
 #include "utils.h"
 #include <algorithm>
 #include <assert.h>
+#include <stdexcept>
+#include <string.h>
 
 MurmurCollisions::MurmurCollisions(
     const Murmur& murmur

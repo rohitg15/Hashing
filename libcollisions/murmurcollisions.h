@@ -2,6 +2,7 @@
 #define _MURMUR_COLLISIONS_H_
 
 #include "murmur.h"
+#include <cstdlib>
 #include <vector>
 
 class MurmurCollisions
