@@ -9,7 +9,8 @@ int main(int argc, char **argv)
     uint64_t seed = static_cast<uint64_t>(0xDEADBEEF);
     Murmur murmur(seed);
     MurmurCollisions collisions(murmur);
-    MurmurCollisions::MultiCollisionSet collisionSet = collisions.GetMulticollisions(5, 16);
+    MurmurCollisions::MultiCollisionSet collisionSet = collisions.GetMurmur3MultiCollisions32bit(4, 8);
+    // MurmurCollisions::MultiCollisionSet collisionSet = collisions.GetMulticollisions(4, 16);
 
     std::cout << " Number of Collisions found # : " << collisionSet.size() << std::endl;
     for (const auto& collisionObj : collisionSet)
@@ -19,10 +20,11 @@ int main(int argc, char **argv)
         {
             printf("%02x",byte);
         }
-        if (collisionObj.size() > 0)
-        {
-            printf(" , %16llx\n", murmur.Murmur2(collisionObj.data(), collisionObj.size()));
-        }   
+        printf("\n");
+        // if (collisionObj.size() > 0)
+        // {
+        //     printf(" , %16llx\n", murmur.Murmur2(collisionObj.data(), collisionObj.size()));
+        // }   
     }
 
     return 0;

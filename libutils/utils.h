@@ -35,6 +35,18 @@ public:
         int w = 64
     );
 
+    static uint32_t Ror(
+        uint32_t x,
+        int r,
+        int w = 32
+    );
+
+    static uint32_t Rol(
+        uint32_t x,
+        int r,
+        int w = 32
+    );
+
     static void CopyVec(
         const std::vector<uint8_t>& src,
         int low,

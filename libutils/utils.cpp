@@ -47,6 +47,25 @@ uint64_t Utils::InvertXorRshift(
     return s;
 }
 
+
+uint32_t Utils::Ror(
+    uint32_t x,
+    int r,
+    int w               //  = 32
+)
+{
+    return (x << (w - r)) | (x >> r);
+}
+
+uint32_t Utils::Rol(
+    uint32_t x,
+    int r,
+    int w               //  = 32
+)
+{
+    return (x << r) | (x >> (w - r));
+}
+
 void Utils::CopyVec(
     const std::vector<uint8_t>& src,
     int low,
